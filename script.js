@@ -26,3 +26,7 @@ submitBtn.addEventListener('click', () => {
     }, 1500);
   }
 });
+if (width <= 0 || height <= 0) {
+		result.textContent = 'are you serious?';
+		return;
+	}
