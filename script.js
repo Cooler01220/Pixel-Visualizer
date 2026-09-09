@@ -50,7 +50,7 @@ submitBtn.addEventListener('click', () => {
     submitBtn.style.backgroundColor = '#5f0000';
 
     setTimeout(() => {
-      title.textContent = 'Pixel Visualizer';
+      title.textContent = 'Pixel Dimension Visualizer';
       submitBtn.innerText = 'Submit';
       submitBtn.classList.remove('is-error');
       submitBtn.style.backgroundColor = '#0a005f';
