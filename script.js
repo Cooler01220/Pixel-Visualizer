@@ -3,30 +3,26 @@ const heightInput = document.getElementById('height-input');
 const submitBtn = document.getElementById('submit-btn');
 const myBox = document.getElementById('my-box');
 const boxText = document.getElementById('box-text');
+const title = document.getElementById('title');
 
 submitBtn.addEventListener('click', () => {
-  const w = widthInput.value;
-  const h = heightInput.value;
+  const width = Number(widthInput.value);
+  const height = Number(heightInput.value);
 
-// check fields
-  if (w > 0 && h > 0) {
-    myBox.style.width = w + 'px';
-    myBox.style.height = h + 'px';
-    boxText.innerText = w + ' x ' + h;
+  // check fields
+  if (width > 0 && height > 0) {
+    myBox.style.width = width + 'px';
+    myBox.style.height = height + 'px';
+    boxText.innerText = width + ' x ' + height;
   } else {
-
-//    error thing
+    title.textContent = 'are you serious?';
     submitBtn.innerText = 'Error';
     submitBtn.style.backgroundColor = '#5f0000';
 
-// pls wait and again
     setTimeout(() => {
+      title.textContent = 'Pixel Visualizer';
       submitBtn.innerText = 'Submit';
       submitBtn.style.backgroundColor = '#0a005f';
     }, 1500);
   }
 });
-if (width <= 0 || height <= 0) {
-		result.textContent = 'are you serious?';
-		return;
-	}
